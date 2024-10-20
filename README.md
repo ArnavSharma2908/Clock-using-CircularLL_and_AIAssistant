@@ -3,9 +3,10 @@
 
 ## Table of Contents
 
-## - Installation
-test
-## - [Usage](#usage)
+#### - Installation
+#### No External Modules need to be installed. Only Python 3 and Optionally GNU Compiler Collection is required for running.
+#### - Usage
+#### Run Main.py file in the repo which 
 ## - [Features](#features)
 ## - [Contributing](#contributing)
 ## - [License](#license)
