@@ -1,7 +1,7 @@
 # Clock-Using-Circular-Linked_List
-### This Project is showcasing CLock and Time Ticking by leveraging the concept of Linked List in the form of Circles commonly known as Circular Linked List. This Project is using turtle library to display clock and using Concepts of Object Oriented Programming Skills (OOPS) seamlessly to create both Nodes for Circular LinkedList and Clock Itself.
+### This project showcases a clock and time ticking by leveraging the concept of a linked list in the form of circles, commonly known as a circular linked list. This project uses the Turtle library to display the clock and seamlessly applies object-oriented programming (OOP) principles to create both nodes for the circular linked list and the clock itself.
 
-##### TechStack: Main.py runs the main function of 'Clock_Drawing_by_Turtle.py' whose function is to Display clock based on parameters recieved. Paramters of time are being recived from Linked_Lists_Time_Generator.py in which create_CLL() function creates a time object (Circular Linked Lists) with customized start as per parameter and tick() function ticks the clock.
+##### Tech Stack: `Main.py` runs the main function of `Clock_Drawing_by_Turtle.py`, which is responsible for displaying the clock based on parameters received. Parameters of time are received from `Linked_Lists_Time_Generator.py`, in which the `create_CLL()` function creates a time object (circular linked lists) with a customized start as per the parameter, and the `tick()` function ticks the clock.
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@
 
 ## Installation
 
-To install AwesomeApp, follow these steps:
+To install the Clock-Using-Circular-Linked_List project, follow these steps:
 
 1. Clone the repository:
 
@@ -25,12 +25,11 @@ To install AwesomeApp, follow these steps:
     cd Clock-Using-Circular-Linked_List
     ```
 
-3. No External Module Required Just Install [Python 3](https://www.python.org/downloads/)
+3. No external modules are required. Just install [Python 3](https://www.python.org/downloads/).
 
 ## Usage
 
-To Run, open Main.py or run the following command:
+To run the project, open `Main.py` or run the following command:
 
 ```bash
 python Main.py
-
