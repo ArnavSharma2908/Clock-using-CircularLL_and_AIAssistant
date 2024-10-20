@@ -3,11 +3,38 @@
 
 ## Table of Contents
 
-#### - Installation
-#### No External Modules need to be installed. Only Python 3 and Optionally GNU Compiler Collection is required for running.
-#### - Usage
-#### Run Main.py file in the repo which 
-## - [Features](#features)
-## - [Contributing](#contributing)
-## - [License](#license)
-## - [Acknowledgements](#acknowledgements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## Installation
+
+To install AwesomeApp, follow these steps:
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/username/awesomeapp.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd awesomeapp
+    ```
+
+3. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+To start using AwesomeApp, run the following command:
+
+```bash
+python main.py
