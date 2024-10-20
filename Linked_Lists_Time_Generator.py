@@ -3,7 +3,7 @@ class Node:
         self.data = data
         self.next = None
     def __str__(self):
-        return f'{self.data}\t{self.next}'
+        return f'{self.data}\tReference:{hex(id(self))}\n{self.next}\t'
 
 
 class Clock:
@@ -48,7 +48,6 @@ def append(Start,value):
     return Start
 
 def create_CLL(th=1,tm=0,ts=0):
-    global hourStart
     tm+=ts//60
     ts%=60
     th+=tm//60
