@@ -11,11 +11,10 @@ try:
     from time import sleep,localtime
     from turtle import Terminator
 
-    time1 = create_CLL(localtime().tm_hour % 12 or 12, localtime().tm_min, localtime().tm_sec)
+    time1 = create_CLL(localtime().tm_hour % 12 or 12, localtime().tm_min, localtime().tm_sec, not(localtime().tm_hour < 12))
 
     t1 = Thread(target = Chat_with_Dev)
     t1.start()
-
     delay_correction = 0.0063
     
     display_message("START OF PROGRAM")

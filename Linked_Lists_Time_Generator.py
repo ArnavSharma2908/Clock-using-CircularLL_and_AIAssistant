@@ -7,8 +7,8 @@ class Node:
 
 
 class Clock:
-    def __init__(self,hour,minute,second):
-        self.flag=False
+    def __init__(self,hour,minute,second,flag):
+        self.flag=flag
         self.meridium=['AM','PM']
         self.hour=hour
         self.minute=minute
@@ -47,7 +47,7 @@ def append(Start,value):
         newnode.next=Start
     return Start
 
-def create_CLL(th=12,tm=0,ts=0):# Main method of this file and will be used by Main.py file to render a Clock instance
+def create_CLL(th=12,tm=0,ts=0,flag=False):# Main method of this file and will be used by Main.py file to render a Clock instance
     tm+=ts//60
     ts%=60
     th+=tm//60
@@ -71,5 +71,5 @@ def create_CLL(th=12,tm=0,ts=0):# Main method of this file and will be used by M
             minuteStart=minuteStart.next
         else:
             secondStart=secondStart.next
-    obj=Clock(hourStart,minuteStart,secondStart)
+    obj=Clock(hourStart,minuteStart,secondStart,flag)
     return obj
