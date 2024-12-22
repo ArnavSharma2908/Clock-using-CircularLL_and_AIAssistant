@@ -1,4 +1,4 @@
-# Clock-Using-Circular-Linked_List
+# Clock-using-CircularLL_and_AIAssistant
 
 This project demonstrates a clock that ticks by leveraging the concept of a circular linked list. It uses Python's Turtle library to display the clock visually and incorporates object-oriented programming (OOP) principles to create both nodes for the circular linked list and the clock itself. Additionally, the Cohere API is utilized to enhance chatbot functionality and assist the users with their queries and troublshooted experience.
 
@@ -35,21 +35,26 @@ This project showcases the integration of data structures and graphical interfac
 
 ## Installation
 
-To install and run the Clock-Using-Circular-Linked_List project, follow these steps:
+To install and run the Clock-Using-CircularLL_and_AIAssistant project, follow these steps:
 
 1. Clone the repository:
    
    ```bash
-   git clone https://github.com/ArnavSharma2908/Clock-Using-Circular-Linked_List
+   git clone https://github.com/ArnavSharma2908/Clock-Using-CircularLL_and_AIAssistant
    ```
 
 2. Navigate to the project directory:
    
    ```bash
-   cd Clock-Using-Circular-Linked_List
+   cd Clock-using-CircularLL_and_AIAssistant
    ```
 
-3. Ensure Python 3 is installed. No external modules are required.
+3. Ensure Python 3 is installed along with required modules
+
+   ```bash
+   pip install cohere
+   pip install turtle
+   ```
 
 ---
 
@@ -74,4 +79,4 @@ To install and run the Clock-Using-Circular-Linked_List project, follow these st
 
 ---
 
-This project was built in December 2024 during the third semester of the developers.
+This project was built in December 2024.
