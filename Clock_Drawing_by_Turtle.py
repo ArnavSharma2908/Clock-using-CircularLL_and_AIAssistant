@@ -1,92 +1,75 @@
 import turtle
-from time import sleep
+from turtle import tracer
 import math
-from Linked_Lists_Time_Generator import create_CLL
 
-# Setup turtle screen
-screen = turtle.Screen()
-screen.bgcolor("white")
-screen.title("Turtle Clock Simulation")
-screen.setup(width=600, height=600)
+def draw_hand(length, angle, color, width):
+    turtle.penup()
+    turtle.home()
+    turtle.pendown()
+    turtle.color(color)
+    turtle.width(width)
+    turtle.setheading(angle)
+    turtle.forward(length)
+    turtle.penup()
+    turtle.home()
 
-# Create a turtle object for drawing the clock face
-face_turtle = turtle.Turtle()
-face_turtle.hideturtle()
-face_turtle.speed(0)  # Max drawing speed
+def draw_circle(radius):
+    turtle.penup()
+    turtle.goto(0, -radius)
+    turtle.pendown()
+    turtle.color("darkblue")
+    turtle.width(5)
+    turtle.circle(radius)
 
-# Create a turtle object for drawing clock hands
-hand_turtle = turtle.Turtle()
-hand_turtle.hideturtle()
-hand_turtle.speed(0)  # Max drawing speed
+def setup_clock():
+    turtle.reset()
+    turtle.speed(0)
+    turtle.bgcolor("lightyellow")
 
-# Draw the clock face only once
-def draw_clock_face():
-    # Draw the clock's circumference
-    face_turtle.penup()
-    face_turtle.goto(0, -250)
-    face_turtle.pendown()
-    face_turtle.pensize(3)  # Set pen size for circumference
-    face_turtle.pencolor("black")  # Set color for circumference
-    face_turtle.circle(250)
+    # Draw clock face
+    draw_circle(200)
+    for i in range(12):
+        angle = i * 30
+        x = 180 * math.sin(math.radians(angle))
+        y = 180 * math.cos(math.radians(angle))
+        turtle.penup()
+        turtle.goto(x, y)
+        turtle.pendown()
+        turtle.dot(15, "darkgreen")
+        turtle.penup()
+        
+        writeup_corrector = 12
+        
+        turtle.goto(1.2 * x, 1.2 * y - writeup_corrector)
+        turtle.write(str(i if i > 0 else 12), align="center", font=("Arial", 16, "bold"))
 
-    # Marking 12, 3, 6, 9 on clock
-    positions = [(0, 210), (210, 0), (0, -220), (-220, 0)]
-    labels = ['12', '3', '6', '9']
+def validate_time(hour, minute, second):
+    if not (1 <= hour <= 12):
+        raise ValueError(f"Hour must be between 1 and 12. Provided: {hour}")
+    if not (0 <= minute <= 59):
+        raise ValueError(f"Minute must be between 0 and 59. Provided: {minute}")
+    if not (0 <= second <= 59):
+        raise ValueError(f"Second must be between 0 and 59. Provided: {second}")
 
-    for i in range(4):
-        face_turtle.penup()
-        face_turtle.goto(positions[i])
-        face_turtle.write(labels[i], align="center", font=("Arial", 24, "normal"))
+def show_clock(hour, minute, second): # Analog Clock rendering. This method will be used by Main.py file
+    validate_time(hour, minute, second)
+    turtle.clear()
+    setup_clock()
 
-# Function to draw the clock hands
-def draw_hands(hh, mm, ss):
-    hand_turtle.penup()
-    hand_turtle.goto(0, 0)  # Move to center to draw hands
+    correction_factor = 270
+    inp_shift = 0
 
-    # Calculate angles for hands in radians
-    sec_angle = math.radians(90 - (6 * ss))  # 360° / 60 seconds
-    min_angle = math.radians(90 - (6 * mm))  # 360° / 60 minutes
-    hr_angle = math.radians(90 - (30 * (hh % 12) + mm / 2))  # 360° / 12 hours
+    total_shift = correction_factor + inp_shift
+    
 
-    # Draw second hand
-    hand_turtle.pensize(1)
-    hand_turtle.pencolor("red")
-    hand_turtle.goto(100 * math.cos(sec_angle), 100 * math.sin(sec_angle))
-    hand_turtle.pendown()
-    hand_turtle.goto(0, 0)  # Return to center
-    hand_turtle.penup()
+    hour_angle = (360 / 12) * (hour % 12) + (minute / 60) * 30 + total_shift
+    minute_angle = (360 / 60) * minute + (second / 60) * 6 + total_shift
+    second_angle = (360 / 60) * second + total_shift
 
-    # Draw minute hand
-    hand_turtle.pensize(4)
-    hand_turtle.pencolor("blue")
-    hand_turtle.goto(150 * math.cos(min_angle), 150 * math.sin(min_angle))
-    hand_turtle.pendown()
-    hand_turtle.goto(0, 0)  # Return to center
-    hand_turtle.penup()
+    draw_hand(100, -hour_angle, "black", 6)
+    draw_hand(150, -minute_angle, "blue", 4)
+    draw_hand(180, -second_angle, "red", 2)
+    turtle.update()
 
-    # Draw hour hand
-    hand_turtle.pensize(6)
-    hand_turtle.pencolor("black")
-    hand_turtle.goto(80 * math.cos(hr_angle), 80 * math.sin(hr_angle))
-    hand_turtle.pendown()
-    hand_turtle.goto(0, 0)  # Return to center
-    hand_turtle.penup()
 
-# Initial draw of the clock face
-
-def runMain():
-    Time_Obj1=create_CLL()
-
-    draw_clock_face()
-    try:
-        while True:
-            hand_turtle.clear()  # This only clears the hands without affecting the clock face
-            draw_hands(*Time_Obj1())
-            print(Time_Obj1)
-            Time_Obj1.tick()
-            sleep(0.5)  # Shorter delay for faster updates
-    except:# turtle.Terminator:
-        print("Turtle graphics window closed.")
-
-    # Keep the window open
-    screen.mainloop()
+#turtle.done()
