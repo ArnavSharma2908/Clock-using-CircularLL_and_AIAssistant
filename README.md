@@ -49,11 +49,17 @@ To install and run the Clock-Using-CircularLL_and_AIAssistant project, follow th
    cd Clock-using-CircularLL_and_AIAssistant
    ```
 
-3. Ensure Python 3 is installed along with required modules
+3. Ensure Python 3 is installed along with required modules and pip is functional:
 
    ```bash
    pip install cohere
    pip install turtle
+   ```
+
+4. Generate a Cohere API key from [Cohere's Website](https://dashboard.cohere.com/api-keys). Copy the key and either paste it into the Clock_DevBuddy.py file at the designated location as a string assigned to the variable COHERE_API_KEY, or save it in the system environment variables. In the latter case, use a Python dictionary format as shown below, with a key named 'Cohere' and the corresponding value being the generated API key:
+
+   ```python
+   {"Cohere":"<your-api-key>"}
    ```
 
 ---
