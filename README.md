@@ -22,6 +22,7 @@ This project showcases the integration of data structures and graphical interfac
 - The Turtle library for rendering the clock face and hands.
 - Object-oriented principles to encapsulate clock components and behavior.
 - Chatbot functionality powered by the Cohere API for interactive guidance.
+- The file Linked_Lists_Time_Generator.c is a C language implementation that mirrors the functionality and purpose of the Python file Linked_Lists_Time_Generator.py. While the Python file likely utilizes Python's dynamic and high-level constructs, the C file demonstrates the equivalent logic and structure in a more low-level and manually managed context.
 
 ---
 
