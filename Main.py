@@ -10,8 +10,6 @@ try:
     from Digital_Representer import display_message
     from Clock_DevBuddy import Chat_with_Dev
     from threading import Thread
-    
-    
 
     time1 = create_CLL(localtime().tm_hour % 12 or 12, localtime().tm_min, localtime().tm_sec, not(localtime().tm_hour < 12))
 

@@ -1,6 +1,5 @@
 import tkinter as tk
 
-
 window = None
 label = None
 
