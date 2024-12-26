@@ -50,13 +50,13 @@ To install and run the Clock-Using-CircularLL_and_AIAssistant project, follow th
    ```
 
 3. Ensure Python 3 is installed along with required modules and pip is functional:
-
+   
    ```bash
    pip install cohere
    ```
 
 4. Generate a Cohere API key from [Cohere's Website](https://dashboard.cohere.com/api-keys). Copy the key and either paste it into the Clock_DevBuddy.py file at the designated location as a string assigned to the variable COHERE_API_KEY and comment out any other declaration of variable COHERE_API_KEY, or save it in the system enviornment variables. In the latter case, use a Python dictionary format as shown below, with a key named 'Cohere' and the corresponding value being the generated API key:
-
+   
    ```python
    {"Cohere":"<your-api-key>"}
    ```
@@ -70,12 +70,13 @@ To install and run the Clock-Using-CircularLL_and_AIAssistant project, follow th
    ```bash
    python Main.py
    ```
+   
    If the above command does not work in Terminal/Command Prompt then try running Main.py file from working directory by using Python IDLE or any other present IDE.
    If Dev Buddy AI Assistant is not working then try debugging API part in following ways mentioned:
-      1) Check if generated Cohere API key is a valid and active Key from [Cohere](https://cohere.com/).
-      2) If API Key is valid then check if API Key was pasted correctly in System enviornment variables in prescribed dictionary format as discussed earlier.
-      3) If previous Step 2 is the issue then go for simpler method that was discussed earlier. Paste the generated API Key in Clock_DevBuddy.py at designated location and comment out the above line which is not needed or may throw error. This method is not recommended as it may expose user's API Key if code is shared without inspection and correction of such API Keys.
    
+   1) Check if generated Cohere API key is a valid and active Key from [Cohere](https://cohere.com/).
+   2) If API Key is valid then check if API Key was pasted correctly in System enviornment variables in prescribed dictionary format as discussed earlier.
+   3) If previous Step 2 is the issue then go for simpler method that was discussed earlier. Paste the generated API Key in Clock_DevBuddy.py at designated location and comment out the above line which is not needed or may throw error. This method is not recommended as it may expose user's API Key if code is shared without inspection and correction of such API Keys.
 
 2. After following all the steps, the program will render an clock with analog display with ticking functionality, and the chatbot will provide assistance or additional information as required about Code and developers.
 

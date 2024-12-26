@@ -1,5 +1,7 @@
 from os import _exit
 from tkinter import _tkinter
+from turtle import Terminator
+from time import sleep,localtime
 
 try:
 
@@ -8,8 +10,8 @@ try:
     from Digital_Representer import display_message
     from Clock_DevBuddy import Chat_with_Dev
     from threading import Thread
-    from time import sleep,localtime
-    from turtle import Terminator
+    
+    
 
     time1 = create_CLL(localtime().tm_hour % 12 or 12, localtime().tm_min, localtime().tm_sec, not(localtime().tm_hour < 12))
 
